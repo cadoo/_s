@@ -14,7 +14,7 @@
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 
-if ( ! function_exists( '_s_setup' ) ):
+if ( ! function_exists( '_s_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -34,12 +34,12 @@ function _s_setup() {
 	/**
 	 * Custom functions that act independently of the theme templates
 	 */
-	//require( get_template_directory() . '/inc/tweaks.php' );
+	require( get_template_directory() . '/inc/extras.php' );
 
 	/**
-	 * Custom Theme Options
+	 * Customizer additions
 	 */
-	//require( get_template_directory() . '/inc/theme-options/theme-options.php' );
+	require( get_template_directory() . '/inc/customizer.php' );
 
 	/**
 	 * WordPress.com-specific functions and definitions
@@ -72,9 +72,9 @@ function _s_setup() {
 	) );
 
 	/**
-	 * Add support for the Aside Post Formats
+	 * Enable support for Post Formats
 	 */
-	add_theme_support( 'post-formats', array( 'aside', ) );
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 }
 endif; // _s_setup
 add_action( 'after_setup_theme', '_s_setup' );
