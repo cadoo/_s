@@ -3,7 +3,6 @@
  * The template for displaying 404 pages (Not Found).
  *
  * @package _s
- * @since _s 1.0
  */
 
 get_header(); ?>
@@ -31,7 +30,7 @@ get_header(); ?>
 					</div><!-- .widget -->
 
 					<?php
-					/* translators: %1$s: smilie */
+					/* translators: %1$s: smiley */
 					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', '_s' ), convert_smilies( ':)' ) ) . '</p>';
 					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 					?>
@@ -41,7 +40,7 @@ get_header(); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 .post .error404 .not-found -->
 
-		</div><!-- #content .site-content -->
-	</div><!-- #primary .content-area -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
 
 <?php get_footer(); ?>
